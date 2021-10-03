@@ -5,6 +5,7 @@ before_action :ensure_correct_user, only:[:edit]
     @book = Book.find(params[:id])
     @books = Book.new
     @user = @book.user
+    @book_comment = BookComment.new
   end
 
   def index
@@ -53,7 +54,7 @@ before_action :ensure_correct_user, only:[:edit]
     @book = Book.find(params[:id])
      unless @book.user == current_user
      redirect_to books_path
-   end
-  end
+     end
+    end
 
 end
