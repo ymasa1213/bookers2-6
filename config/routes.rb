@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/search' => 'searches#search'
-  get 'favorites/create'
-  get 'favorites/destroy'
+  # get 'favorites/create'
+  # get 'favorites/destroy'
   devise_for :users
   root 'homes#top'
   get 'home/about' => 'homes#about'
